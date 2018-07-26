@@ -58,7 +58,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../images/portrait-small.jpg");
+      background: url("../images/portrait.jpg");
       border-radius: 50%;
       border: solid 3px white;
       background-size: cover; }
@@ -104,7 +104,7 @@ body {
   font-family: "Nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../images/background/background5.jpeg);
+    background: url(../images/background/background3.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -175,6 +175,8 @@ main {
 
 .bio-image {
   grid-area: bioimage;
+  height: 300px;
+  width: 290px;
   margin: auto;
   border-radius: 5%;
   border: #24467a 3px solid; }
@@ -240,7 +242,7 @@ main {
     transform: translate3d(0, 0, -100%);
     font-size: 23px; }
     .menu-branding .portrait {
-      background: url(../images/portrait-small.jpg);
+      background: url(../images/portrait.jpg);
       width: 120px;
       height: 120px;
       background-size: cover; }
