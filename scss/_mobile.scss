@@ -1,0 +1,121 @@
+// Widescreens
+@include mediaXl {
+}
+
+// Desktop & Laptops
+@include mediaLg {
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 5px;
+      font-size: 3rem;
+    }
+
+    .sm-heading {
+      width: 100%;
+    }
+
+    .nick-heading {
+      margin: 0 auto;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(0, 0, -100%);
+    font-size: 23px;
+
+    .portrait {
+      background: $portrait-small;
+      width: 120px;
+      height: 120px;
+      background-size: cover;
+    }
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  main {
+    padding: 1em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    &.lg-heading {
+      margin-top: 10vh;
+      margin-bottom: 5px;
+      font-size: 35px;
+    }
+
+    &.sm-heading {
+      margin-top: 10vh;
+      font-size: 20px;
+    }
+
+    &.nick-heading {
+      font-size: 17px;
+    }
+  }
+}
+
+@include mediaSmHeight {
+  main {
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    &.lg-heading {
+      margin-top: 10vh;
+      margin-bottom: 5px;
+      font-size: 35px;
+    }
+
+    &.sm-heading {
+      margin-top: 7vh;
+      font-size: 18px;
+    }
+
+    &.nick-heading {
+      font-size: 17px;
+    }
+  }
+
+  main {
+    overflow-x: hidden;
+    .icons {
+      margin-top: 0;
+
+      a {
+        padding: 0.5rem;
+      }
+    }
+  }
+}

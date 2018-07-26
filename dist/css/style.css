@@ -60,14 +60,15 @@
       height: 250px;
       background: url("../images/portrait-small.jpg");
       border-radius: 50%;
-      border: solid 3px white; }
+      border: solid 3px white;
+      background-size: cover; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #24467a; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -78,7 +79,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #24467a; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.07s; }
@@ -124,13 +125,26 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 5rem; }
+    font-size: 5rem;
+    margin-bottom: 0;
+    padding-bottom: 0; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    width: 55%;
     margin-bottom: 2rem;
+    margin-top: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
+  h1.nick-heading,
+  h2.nick-heading,
+  h3.nick-heading {
+    font-size: 1.3rem;
+    opacity: 0.35;
+    background: rgba(73, 73, 73, 0.5);
+    width: 6rem;
+    padding: 0px;
+    text-align: center; }
 
 a {
   color: #fff;
@@ -142,7 +156,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #24467a; }
 
 main {
   padding: 4rem;
@@ -150,11 +164,89 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.5rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #24467a;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 15vh; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 5px;
+      font-size: 3rem; }
+    main .sm-heading {
+      width: 100%; }
+    main .nick-heading {
+      margin: 0 auto; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(0, 0, -100%);
+    font-size: 23px; }
+    .menu-branding .portrait {
+      background: url(../images/portrait-small.jpg);
+      width: 120px;
+      height: 120px;
+      background-size: cover; } }
+
+@media screen and (max-width: 500px) and (min-height: 439px) {
+  main {
+    padding: 1em; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    margin-top: 10vh;
+    margin-bottom: 5px;
+    font-size: 35px; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-top: 10vh;
+    font-size: 20px; }
+  h1.nick-heading,
+  h2.nick-heading,
+  h3.nick-heading {
+    font-size: 17px; } }
+
+@media screen and (max-height: 440px) {
+  main {
+    padding: 1rem 1rem 0 1rem; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    margin-top: 10vh;
+    margin-bottom: 5px;
+    font-size: 35px; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-top: 7vh;
+    font-size: 18px; }
+  h1.nick-heading,
+  h2.nick-heading,
+  h3.nick-heading {
+    font-size: 17px; }
+  main {
+    overflow-x: hidden; }
+    main .icons {
+      margin-top: 0; }
+      main .icons a {
+        padding: 0.5rem; } }
