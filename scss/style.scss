@@ -76,6 +76,12 @@ main {
         @include easeOut();
       }
     }
+    a:nth-child(1):hover {
+      color: #000;
+    }
+    a:nth-child(2):hover {
+      color: #0077B5;
+    }
   }
 
   &#home {
