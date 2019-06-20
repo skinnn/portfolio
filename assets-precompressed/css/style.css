@@ -1,3 +1,4 @@
+/* Fixes */
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -5,6 +6,22 @@
   top: 35px;
   cursor: pointer;
   transition: all 0.5s ease-out; }
+  .menu-btn.btn-closed:hover > .btn-line:nth-child(1) {
+    animation: blinker 1.2s linear infinite;
+    animation-delay: 0.4s;
+    background: #ef1515 !important;
+    margin-left: auto;
+    margin-right: auto; }
+  .menu-btn.btn-closed:hover > .btn-line:nth-child(2) {
+    animation: blinker 1.2s linear infinite;
+    animation-delay: 0.8s;
+    background: #1c57ed !important;
+    margin-left: auto;
+    margin-right: auto; }
+  .menu-btn.btn-closed:hover > .btn-line:nth-child(3) {
+    animation: blinker 1.2s linear infinite;
+    animation-delay: 1s;
+    background: white !important; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -93,6 +110,11 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.28s; }
 
+/* Animations */
+@keyframes blinker {
+  50% {
+    opacity: 0.2; } }
+
 * {
   box-sizing: border-box; }
 
@@ -179,10 +201,10 @@ main {
 
 .bio-image {
   grid-area: bioimage;
-  height: 300px;
-  width: 290px;
+  transition: 0.4s all;
+  width: 280px;
   margin: auto;
-  border-radius: 5%;
+  border-radius: 50%;
   border: #24467a 3px solid; }
 
 .about-info {
@@ -193,20 +215,60 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.2rem; }
-  .about-info .job-heading {
-    text-align: center; }
-  .about-info .job-subheading {
-    text-align: center; }
-  .about-info .job-description {
-    text-align: center; }
+    .about-info .bio h2 {
+      width: 100%; }
   .about-info .job {
-    background: #515151;
-    padding: 0.5rem;
-    border-bottom: #24467a 5px solid; }
+    background: #494949;
+    padding: 1.8rem 1rem;
+    border-bottom: #24467a 5px solid;
+    border-radius: 5px; }
+    .about-info .job .job-heading {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 600; }
+    .about-info .job .job-subheading {
+      text-align: center;
+      font-size: 1rem; }
+    .about-info .job .job-description {
+      text-align: center; }
+    .about-info .job h3 {
+      display: table;
+      margin: 0 auto;
+      font-weight: 400;
+      letter-spacing: 1px;
+      transition: 0.3s all; }
   .about-info .job-1 {
     grid-area: job1; }
+    .about-info .job-1 .job-heading::before {
+      content: '';
+      background-image: url(../images/upwork-logo.png);
+      background-size: 100% 100%;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 auto 4px auto; }
+    .about-info .job-1 a:hover h3 {
+      cursor: pointer;
+      opacity: 0.8;
+      color: #00b22d; }
   .about-info .job-2 {
     grid-area: job2; }
+    .about-info .job-2 .job-heading::before {
+      content: '';
+      background-image: url(../images/alpha-logo.png);
+      background-size: 100% 100%;
+      display: block;
+      width: 45px;
+      height: 40px;
+      margin: 0 auto 4px auto; }
+    .about-info .job-2 h3 {
+      text-decoration-color: #d61515; }
+    .about-info .job-2 a:hover h3 {
+      cursor: pointer;
+      opacity: 0.8;
+      text-decoration: underline;
+      text-decoration-color: #d61515; }
   .about-info .job-3 {
     grid-area: job3; }
 
@@ -216,6 +278,21 @@ main {
   background: #1e1e1e;
   color: #fff;
   height: 60px; }
+
+/*  Fixes 980px */
+@media screen and (max-width: 980px) {
+  .about-info {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "bioimage bio bio" "bioimage bio bio" "job1 job1 job1" "job2 job2 job2" "job3 job3 job3";
+    grid-template-columns: 1fr; }
+    .about-info .bio-image {
+      width: 220px; }
+    .about-info .bio p {
+      font-size: 17px; }
+    .about-info .job {
+      max-width: 600px;
+      margin: 0 auto; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -246,13 +323,19 @@ main {
     transform: translate3d(0, 0, -100%);
     font-size: 23px; }
     .menu-branding .portrait {
-      background: url(../images/portrait.jpg);
+      background: url(../images/me.png);
       width: 120px;
       height: 120px;
       background-size: cover; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    .about-info .bio-image {
+      margin-top: 25px;
+      width: 200px; }
+    .about-info .bio p {
+      font-size: 16px;
+      padding: 0 15px; } }
 
 @media screen and (max-width: 500px) and (min-height: 439px) {
   main {
@@ -271,8 +354,12 @@ main {
   h1.nick-heading,
   h2.nick-heading,
   h3.nick-heading {
-    font-size: 17px; } }
+    font-size: 17px; }
+  #about .lg-heading {
+    font-size: 30px;
+    margin-top: 70px; } }
 
+/* Small height - max-height: 440px */
 @media screen and (max-height: 440px) {
   main {
     padding: 1rem 1rem 0 1rem; }

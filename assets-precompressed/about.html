@@ -20,7 +20,7 @@
 
 <body>
   <header>
-    <div class="menu-btn">
+    <div id="menu-btn" class="menu-btn btn-closed sound-playable" onmouseover="playSound();" title="Yes, Master?">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -56,31 +56,39 @@
     <!-- <h3 class="nick-heading">
       skinnn
     </h3> -->
-    <h2 class="sm-heading">
+    <!-- <h2 class="sm-heading">
       Let me tell you a story...
-    </h2>
+    </h2> -->
     <div class="about-info">
-      <img src="images/portrait.jpg" alt="Nikola Jovanovic" class="bio-image">
+      <img src="images/me.png" alt="Nikola Jovanovic" class="bio-image">
 
       <div class="bio">
-        <h3 class="text-secondary">BIO</h3>
+        <h2 class="sm-heading">
+          Let me tell you a story...
+        </h2>
         <p>Sir Charles Spencer Chaplin KBE (16 April 1889 – 25 December 1977) was an English comic actor, filmmaker, and composer who rose to fame in the era of silent film. Chaplin became a worldwide icon through his screen persona "the Tramp" and is considered one of the most important figures in the history of the film industry. His career spanned more than 75 years, from childhood in the Victorian era until a year before his death in 1977, and encompassed both adulation and controversy.</p>
       </div>
 
       <div class="job job-1">
-        <h3 class="job-heading">123 Webshop</h3>
-        <h6 class="job-subheading">Full Stack Developer</h6>
+          <a href="#" target="_blank">
+            <h3 class="job-heading">UpWork</h3>
+          </a>
+        <h6 class="job-subheading">Web developer</h6>
         <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolor itaque, tenetur cupiditate mollitia corporis, optio inventore nam maiores ipsam.</p>
       </div>
 
       <div class="job job-2">
-        <h3 class="job-heading">Designer Abc</h3>
-        <h6 class="job-subheading">Front-End Developer</h6>
+        <a href="https://alphaefficiency.com/" target="_blank">
+          <h3 class="job-heading">Alpha Efficiency</h3>
+        </a>
+        <h6 class="job-subheading">Web Developer</h6>
         <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolor itaque, tenetur cupiditate mollitia corporis, optio inventore nam maiores ipsam.</p>
       </div>
 
       <div class="job job-3">
-        <h3 class="job-heading">Webworks</h3>
+        <a href="#" target="_blank">
+          <h3 class="job-heading">Example</h3>
+        </a>
         <h6 class="job-subheading">Graphic Designer</h6>
         <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolor itaque, tenetur cupiditate mollitia corporis, optio inventore nam maiores ipsam.</p>
       </div>
@@ -91,6 +99,13 @@
   Copyright &copy; 2018
   </footer>
 
+  <!-- Sounds -->
+  <audio>
+    <source src="./sounds/yes-master.mp3"></source>
+    <source src="./sounds/yes-master.ogg"></source>
+  </audio>
+
+  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 

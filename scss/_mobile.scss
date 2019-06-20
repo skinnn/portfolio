@@ -1,12 +1,42 @@
-// Widescreens
+// Widescreens - min-width: 1171px
 @include mediaXl {
 }
 
-// Desktop & Laptops
+// Desktop & Laptops - min-width: 769px and max-width: 1170px
 @include mediaLg {
 }
 
-// Tablets & Small Laptops
+/*  Fixes 980px */
+@include mediaFix980 {
+  .about-info {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      "bioimage bio bio"
+      "bioimage bio bio"
+      "job1 job1 job1"
+      "job2 job2 job2"
+      "job3 job3 job3";
+    grid-template-columns: 1fr;
+
+    .bio-image {
+      width: 220px;
+    }
+
+    .bio {
+      p {
+        font-size: 17px;
+      }
+    }
+
+    & .job {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Tablets & Small Laptops - max-width: 768px
 @include mediaMd {
   main {
     align-items: center;
@@ -66,10 +96,23 @@
       "job3";
 
     grid-template-columns: 1fr;
+
+    .bio-image {
+      margin-top: 25px;
+      width: 200px;
+    }
+
+    .bio {
+
+      p {
+        font-size: 16px;
+        padding: 0 15px;
+      }
+    }
   }
 }
 
-// Smartphones
+// Smartphones - max-width: 500px and min-height: 439px
 @include mediaSm {
   main {
     padding: 1em;
@@ -93,8 +136,17 @@
       font-size: 17px;
     }
   }
+
+  #about {
+
+    .lg-heading {
+      font-size: 30px;
+      margin-top: 70px;
+    }
+  }
 }
 
+/* Small height - max-height: 440px */
 @include mediaSmHeight {
   main {
     padding: 1rem 1rem 0 1rem;

@@ -3,7 +3,7 @@ $secondary-color: #24467a;
 $show-home-image: true;
 $home-image: url(../images/background/background3.jpg);
 $background-opacity: 0.7;
-$portrait-image: url(../images/portrait.jpg);
+$portrait-image: url(../images/me.png);
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -67,6 +67,14 @@ $portrait-image: url(../images/portrait.jpg);
 
 @mixin mediaXl {
   @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+
+/* Fixes */
+@mixin mediaFix980 {
+  @media screen and (max-width: 980px) {
     @content;
   }
 }
