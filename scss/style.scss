@@ -174,15 +174,15 @@ main {
   .job-2 {
     grid-area: job2;
     
-    .job-heading::before {
-      content: '';
-      background-image: url(../images/alpha-logo.png);
-      background-size: 100% 100%;
-      display: block;
-      width: 45px; 
-      height: 40px;
-      margin: 0 auto 4px auto;
-    }
+    // .job-heading::before {
+    //   content: '';
+    //   background-image: url(../images/alpha-logo.png);
+    //   background-size: 100% 100%;
+    //   display: block;
+    //   width: 45px; 
+    //   height: 40px;
+    //   margin: 0 auto 4px auto;
+    // }
 
     & h3 {
       text-decoration-color: #d61515;

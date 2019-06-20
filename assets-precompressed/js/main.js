@@ -63,9 +63,5 @@ function playSound() {
       var audio = document.getElementsByTagName('audio')[0];
       audio.play();
     }
-  
-  // If playable class is not there
-  } else {
-    return;
   }
 };

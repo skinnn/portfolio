@@ -254,14 +254,6 @@ main {
       color: #00b22d; }
   .about-info .job-2 {
     grid-area: job2; }
-    .about-info .job-2 .job-heading::before {
-      content: '';
-      background-image: url(../images/alpha-logo.png);
-      background-size: 100% 100%;
-      display: block;
-      width: 45px;
-      height: 40px;
-      margin: 0 auto 4px auto; }
     .about-info .job-2 h3 {
       text-decoration-color: #d61515; }
     .about-info .job-2 a:hover h3 {
