@@ -45,6 +45,7 @@ function toggleMenu() {
 // Yes Master audio
 function playSound() {
   var isPlayable = document.getElementById('menu-btn');
+  var audio = document.getElementsByTagName('audio')[0];
 
   // If playable class is there
   if(isPlayable.classList.contains('sound-playable')) {
@@ -60,7 +61,6 @@ function playSound() {
         document.all.sound.src = '../sounds/yes-master.mp3';
       }
     } else {
-      var audio = document.getElementsByTagName('audio')[0];
       audio.play();
     }
   }
