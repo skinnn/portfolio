@@ -1,6 +1,6 @@
 "use strict";
 
-// Select DOM Items
+// DOM Items
 var menuBtn = document.querySelector('.menu-btn');
 var menu = document.querySelector('.menu');
 var menuNav = document.querySelector('.menu-nav');
@@ -40,7 +40,7 @@ function toggleMenu() {
 
     showMenu = false;
   }
-} // Yes Master audio
+} // Audio
 
 
 function playSound() {
@@ -59,9 +59,24 @@ function playSound() {
         document.all.sound.src = '../sounds/yes-master.mp3';
       }
     } else {
-      audio.play();
+      audio.volume = 0.2; // audio.play();
     }
   }
 }
 
-;
+; // Document Ready
+
+document.addEventListener('DOMContentLoaded', function () {
+  var preloader = document.querySelector('.preloader');
+  var main = document.querySelector('main');
+  setTimeout(function () {
+    // Hide preloader
+    preloader.style.opacity = 0;
+    preloader.style.display = 'none'; // Display main content
+
+    main.style.display = 'block';
+    setTimeout(function () {
+      main.style.opacity = 1;
+    }, 50);
+  }, 1900);
+});

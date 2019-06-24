@@ -20,13 +20,23 @@
 </head>
 
 <body id="bg-img">
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-inner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+      <div class="dot3"></div>
+    </div>
+  </div>
+  <!-- End Preloader -->
+  
   <header>
-    <div id="menu-btn" class="menu-btn btn-closed sound-playable" onmouseover="playSound();" title="Yes, Master?">
+    <div id="menu-btn" class="menu-btn btn-closed sound-playable" onClick="playSound();" title="Yes, Master?">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
     </div>
-
+    <!-- Navigation -->
     <nav class="menu">
       <div class="menu-branding">
         <div class="portrait">
@@ -48,6 +58,7 @@
         </li>
       </ul>
     </nav>
+    <!-- End Navigation -->
   </header>
 
   <main id="home">
