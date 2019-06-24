@@ -160,7 +160,7 @@ body {
 .preloader-inner > div {
   width: 20px;
   height: 20px;
-  background-color: #00a4e6;
+  background-color: #3d3c3c;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;

@@ -52,7 +52,7 @@ function playSound() {
     isPlayable.classList.remove('sound-playable');
     setTimeout(function () {
       isPlayable.classList.add('sound-playable');
-    }, 10000); // Play sound
+    }, 60000); // Play sound
 
     if (navigator.appName == 'Microsoft Internet Explorer' && navigator.appVersion.indexOf('MSIE 7') != -1 || navigator.appVersion.indexOf('MSIE 8') != -1) {
       if (document.all) {
@@ -78,5 +78,5 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
       main.style.opacity = 1;
     }, 50);
-  }, 1900);
+  }, 2300);
 });
