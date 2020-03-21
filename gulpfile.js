@@ -8,16 +8,16 @@ const rename = require('gulp-rename');
 const livereload = require('gulp-livereload');
 
 // HTML
-var HTML_SRC = 'assets-precompressed/*.html';
+var HTML_SRC = 'src/*.html';
 var HTML_DEST = 'dist';
 // Sass
 var SASS_SRC = 'scss/*.scss';
-var SASS_DEST = 'assets-precompressed/css';
+var SASS_DEST = 'src/css';
 // CSS
-var STYLE_SRC = 'assets-precompressed/css/*.css';
+var STYLE_SRC = 'src/css/*.css';
 var STYLE_DEST = 'dist/css';
 // JavaScript
-var JS_SRC = 'assets-precompressed/js/*.js';
+var JS_SRC = 'src/js/*.js';
 var JS_TO_MIN_SRC = 'dist/js/*.js';
 var JS_DEST = 'dist/js';
 
@@ -109,8 +109,6 @@ function watchFiles() {
 }
 const watch = gulp.parallel(watchFiles);
 // exports.watch = watch;
-
-
 
 // Default
 gulp.task('default', watch);
